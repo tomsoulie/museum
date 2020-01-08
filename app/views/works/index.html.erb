@@ -15,7 +15,7 @@
   </thead>
 
   <tbody>
-    <div class="d-md-flex flex-md-equal w-100 my-md-3 pl-md-3 gridcontent">
+    <div class="gridcontent">
     <% @works.each do |work| %>
      <!-- <tr>
         <td><%= work.title %></td>
@@ -29,12 +29,15 @@
       </tr>-->
       
         
-          <div class="my-3 p-3">
-            <h2 class="display-5"><%= work.title %></h2>
-            <p class="lead"><%= work.author %></p>
-            <p><%= work.description %></p>
-            <img src="<%= work.image %>" width=200px>
-            <button> <%= link_to 'Edit', edit_work_path(work) %></button>
+          <div class="col-lg-4 artwork">
+            <div class="content-artwork">
+              <h2 class="display-5"><%= work.title %></h2>
+              <p class="lead"><%= work.author %></p>
+              <p><%= work.description %></p>
+              <img  src="<%= work.image %>" width=200px>
+              <button> <%= link_to 'Edit', edit_work_path(work) %></button>
+              <button> <%= link_to 'Destroy', work, method: :delete, data: { confirm: 'Are you sure?' } %></button>
+            </div>
           </div>     
     <% end %>
  </div>

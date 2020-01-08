@@ -13,18 +13,31 @@
  *= require_tree .
  *= require_self
  */
-.my-3{
-	background-color: white;
-	margin: 20px;
-	width: 350px;
-
-}
 
 .gridcontent{
 	display: flex;
 	flex-direction: row; 	
 }
-.artwork{
+.artwork p{
+	width: 330px;
+
+}
+
+@media (max-width: 992px){
+	.gridcontent{
+		display: flex;
+		flex-direction: column;
+	}
+	.artwork p{
 	width: 350px;
+	}
+	.artwork{
+
+	}
+	.content-artwork{
+		width: 400px;
+		margin-left: auto;
+		margin-right: auto;
+	}
 
 }
