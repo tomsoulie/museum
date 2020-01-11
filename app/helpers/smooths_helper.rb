@@ -1,0 +1,2 @@
+module SmoothsHelper
+end
