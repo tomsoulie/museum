@@ -1,6 +1,9 @@
 
+<div class= "new-work-title offset-5  col-2">
+      <h4>You can add or edit a Work</h4>
+</div>
 
-
+<div class="container">
 <%= simple_form_for(@work) do |f| %>
   <%= f.error_notification %>
   <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
@@ -17,3 +20,4 @@
     <%= f.button :submit %>
   </div>
 <% end %>
+</div>

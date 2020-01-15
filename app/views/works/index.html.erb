@@ -6,7 +6,7 @@
     </h1>
   </div>
   <div class="description col-8">
-  <p>It's an experience in order of tying to represent Violence trough many arts. The exhibition route is marked in three level of violences : from the least violents artworks until the most violents.You can constitute as you want each steps with the artworks. Let's create your own museum.</p>
+  <p>It's an experience in order to represent Violence through many arts. The exhibition route is marked in three levels of violence : from the least violents artworks until the most violents.You can constitute as you want each steps with the artworks. Let's create your own museum.</p>
   </div>
 </div>
 <p id="notice"><%= notice %></p>
@@ -31,7 +31,7 @@
         <div class="col-8 col-lg-4 box">
           <div class="container-fluid hvr-grow cat hard">
             <h2>Hard</h2>
-            <p>Les oeuvres les plus Violentes, sont principalement celles qui choquent et provoquent l'émoi chez le spectateur. Ainsi l'artiste montre des scènes explicites et créée une expérience désagréable.</p>
+            <p>Les oeuvres les plus Violentes, sont principalement celles qui choquent et provoquent l'émoi chez le spectateur. Ainsi l'artiste montre des scènes explicites et créé une expérience désagréable.</p>
           </div>
         </div>
       </div>
@@ -42,7 +42,7 @@
     <h1>All the Works 
       <br>
       <span class="new-work">
-        <%= link_to 'New Work', new_work_path %>
+        <%= link_to 'Add Work', new_work_path %>
       </span>
     </h1>   
   </div>   
@@ -50,6 +50,11 @@
 
 
     <div class="container">
+      <%= link_to authors_path, :action => 'go' do %>
+    <div  class= "artists  col-2">  
+      <h4>See the Artists</h4>
+    </div>
+  <% end %>
     <div class="row row-cols-3 gridcontent">
     <% @works.each do |work| %>
      <!-- <tr>
@@ -62,8 +67,10 @@
         <td><%= link_to 'Edit', edit_work_path(work) %></td>
         <td><%= link_to 'Destroy', work, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>-->
-          <div class="col-8 col-lg-4 artwork ">
-            <div class="container-fluid hvr-grow content-artwork">
+     
+          <div href="works" class="col-8 col-lg-4 artwork ">
+            <%= link_to work, :action => 'go' do %>
+            <div  class="container-fluid hvr-grow content-artwork" >
               <h2><%= work.title %></h2>
               <p><%= link_to (work.author ? work.author : "Auteur inconnu") , (work.author ? author_path(work.author) : authors_path ) %></p>
               <p class="container-fluid"><%= work.description %></p>
@@ -74,9 +81,16 @@
                 <button class="btn btn_default"><%= link_to 'Show', work %></button>
               </div>
             </div>
-          </div>     
+           <% end %>
+          </div>  
+            
     <% end %>
  </div>
+ <%= link_to authors_path, :action => 'go' do %>
+    <div  class= "artists col-2">  
+      <h4>See the Artists</h4>
+    </div>
+  <% end %>
   </div>
 
   </body>

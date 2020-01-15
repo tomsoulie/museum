@@ -13,6 +13,17 @@
  *= require_tree .
  *= require_self
  */
+
+ /*all works*/
+p{
+	font-family: 'IM Fell Great Primer SC', serif;
+}
+.content-artwork .show{
+	position: absolute;
+	height: 100%;
+	width: 100%;
+}
+
 .header{
 	height: 150px;
 	position: relative;
@@ -26,7 +37,8 @@
 	height: 150px;
 }
 .description p{
-	font-size: 16px;
+	font-family: 'IM Fell Great Primer SC', serif;
+	font-size: 22px;
 	margin-left: 30px;
 	margin-top: 30px;
 }
@@ -35,15 +47,16 @@
 	height: 150px;
 	background-color: #212121;
 }
+
 h1{
 	color: white;
 	margin-left: 20px;
+	font-family: 'Raleway', sans-serif;
 }
 .titlebox{
 	position: absolute;
 	width: 200px;
 	height: 150px;
-	
 	background-color: #212121;
 }
 .title-bar{
@@ -54,10 +67,10 @@ h1{
 	border-top-style: solid;
 	border-top-width: 10px;
 	border-top-color: #212121;
-/*	background-color: #F2F1EF;*/
 
 }
 .title-bar h1{
+	font-family: 'Raleway', sans-serif;
 	position: absolute;
 	margin-left: 20px;
 	top : 50%;
@@ -65,8 +78,12 @@ h1{
 }
 .content-artwork{
 	margin-top: 40px;
+	position: relative;
 }
-.new-work{
+.content-artwork h2{
+	font-family: 'Raleway', sans-serif;
+}
+.all-works{
 	font-size: 16px;
 }
 .gridcontent{
@@ -103,23 +120,77 @@ h1{
 	width: 100%;
 	height:100%;
 }
+.buttonbox button{
+	font-size: 14px;
+}
 .img{
 	position: relative;
 	margin-left:auto;
 	margin-right: auto;
 	margin-bottom: 20px;
 }
-
+.new-work{
+	font-size: 16px;
+}
+.artists{
+	height: 80px;
+	width: 150px;
+	margin: 50px auto;
+	background-color: #212121;
+	padding-top: 25px;
+	padding-bottom: 25px;
+}
+.artists h4{
+	text-align: center;
+	font-size: 14px;
+	color: white;
+}
+.all-artists{
+	height: 80px;
+	width: 150px;
+	margin: 50px auto;
+	background-color: #212121;
+	padding-top: 25px;
+	padding-bottom: 25px;
+}
+.all-artists h4{
+	text-align: center;
+	font-size: 14px;
+	color: white;
+}
+.show-artist{
+	margin-top: 20%;
+}
+.new-work-title{
+	height: 80px;
+	margin: 50px 0;
+	background-color: #212121;
+	padding-top: 25px;
+	padding-bottom: 25px;
+}
+.new-work-title h4{
+	text-align: center;
+	font-size: 14px;
+	color: white;
+}
 /*categories*/
 .categories{
 	display: flex;
 }
 .cat p, .cat h2{
+
 	color:white;
 	text-align: justify;
 	margin-left: 10px;
 	margin-right: auto;
 	padding-right: 30px;
+}
+.cat h2{
+	font-family: 'Raleway', sans-serif;
+}
+.cat p{
+	font-family: 'IM Fell Great Primer SC', serif;
+	font-size: 16px;
 }
 .cat{
 	border-style: solid;
@@ -136,6 +207,48 @@ h1{
 }
 .hard{
 	background-color: #9D2933;
+}
+/* show */
+.show-container{
+	margin-top: 100px;
+	display: flex;
+	flex-direction: row;
+}
+.content-artwork-show{
+	position: relative;
+	margin-top: auto;
+	margin-bottom: auto;
+	border-style: solid;
+	border-width: 1px;
+	border-color: #212121;
+}
+.titlebox-show{
+	position: relative;
+	width: 400px;
+	height: 170px;
+	
+	background-color: #212121;
+}
+
+.img-show{
+	display: block;
+	position: relative;
+	width: 300px;
+	margin: 20px auto; 
+}
+.title-bar-show{
+	height: 150px;
+	position: relative;
+	background-color: white;
+	border-top-style: solid;
+	border-top-width: 10px;
+	border-top-color: #212121;
+}
+.title-bar-show h1{
+	position: absolute;
+	margin-left: 20px;
+	top : 50%;
+	transform: translateY(-50%);
 }
 @media (max-width: 992px){
 	.gridcontent{

@@ -1,29 +1,26 @@
-<p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Title:</strong>
-  <%= @work.title %>
-</p>
-
-<p>
-  <strong>Author:</strong>
-  <%= @work.author %>
-</p>
-
-<p>
-  <strong>Image:</strong>
-  <img src="<%= @work.image %>" width=300px>
-</p>
-
-<p>
-  <strong>Description:</strong>
-  <%= @work.description %>
-</p>
-
-<p>
-  <strong>Date:</strong>
-  <%= @work.date %>
-</p>
-
-<%= link_to 'Edit', edit_work_path(@work) %> |
-<%= link_to 'Back', works_path %>
+<div class="title-bar-show ">
+  <div class="titlebox-show ">
+    <h1><%= @work.title %>
+      <p><%= @work.author %></p>
+      <p><%= @work.date %></p>
+      <span class="all-works">
+        <%= link_to 'All the Works', works_path %>
+      </span>
+    </h1>   
+  </div>   
+</div>
+<div class="container">
+<div class="show-container">
+  <div class="col-8 offset-lg-3 col-lg-4 carbox-show">
+              <div  class="container-fluid content-artwork-show" >
+                <img class="img-show" src="<%= @work.image %>" >
+                <p class="container-fluid"><%= @work.description %></p>
+                <div class="buttonbox">
+                  <button class="btn btn_default"><%= link_to 'Edit', edit_work_path(@work) %></button>
+                </div>
+              </div>
+  </div>  
+</div>
+</div>
+  <p id="notice"><%= notice %></p>
